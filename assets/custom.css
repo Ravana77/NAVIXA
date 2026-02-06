@@ -11,10 +11,11 @@ html {
     height: 100%;
 }
 
-/*navbar and footer background*/
-.brand-gradient {
-    background: linear-gradient(135deg, #4b1d6f, #0a2a66);
+
+.boxfont {
+    font-family: 'Orbitron', sans-serif;
 }
+
 /*test*/
 
 
@@ -42,19 +43,11 @@ header {
     color: #ff4fd8;   
 }
 
-/*Navbar*/
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.85);
-}
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #ff4fd8;
-}
 
 /*tetsing starts from here*/
 
-/* RGB Glowing Box Effects */
+/* RGB Glowing Box Effects  for the <main>*/
 .glow-box {
     position: relative;
     padding: 2px;
@@ -161,4 +154,122 @@ header {
 
 .text-white-75 {
     color: rgba(255, 255, 255, 0.75);
+}
+
+/*navbar testing */
+
+/*navbar background*/
+.brand-gradient {
+    background: linear-gradient(135deg, #4b1d6f, #0a2a66);
+}
+.navbar.brand-gradient {
+    position: relative;
+    padding: 2px 0;
+    background: linear-gradient(135deg, #ff4fd8, #4b1d6f, #0a2a66, #ff4fd8);
+    background-size: 300% 300%;
+    animation: gradientShift 4s ease infinite;
+    box-shadow: 0 4px 20px rgba(255, 79, 216, 0.4), 0 2px 10px rgba(75, 29, 111, 0.3);
+}
+
+.navbar.brand-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 2px 0;
+    background: linear-gradient(135deg, #4b1d6f, #0a2a66);
+    z-index: 0;
+}
+
+.navbar.brand-gradient .container {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    color:#ffffff;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff4fd8, #ff4fd8);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 79, 216, 0.6);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ff4fd8;
+    text-shadow: 0 0 10px rgba(255, 79, 216, 0.5);
+}
+/*Navbar
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ff4fd8;
+}*/
+/*.navbar-nav 
+{
+    color: #f6f2f5;
+    text-shadow: 0 0 10px rgba(247, 245, 247, 0.5);
+}*/
+
+/* Chairman Card with Special Glow */
+.glow-box-chairman {
+    position: relative;
+    padding: 3px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff4fd8, #4b1d6f, #0a2a66, #ff4fd8);
+    background-size: 400% 400%;
+    animation: gradientShift 5s ease infinite;
+    box-shadow: 0 0 30px rgba(255, 79, 216, 0.6), 0 0 60px rgba(75, 29, 111, 0.4);
+}
+
+.glow-box-chairman::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: rgba(10, 15, 35, 0.95);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+/* Chairman Photo Styling */
+.chairman-photo-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4fd8, #4b1d6f, #0a2a66, #ff4fd8);
+    background-size: 300% 300%;
+    animation: gradientShift 4s ease infinite;
+    box-shadow: 0 0 25px rgba(255, 79, 216, 0.5);
+}
+
+.chairman-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid rgba(10, 15, 35, 0.95);
+}
+
+@media (max-width: 768px) {
+    .chairman-photo {
+        width: 120px;
+        height: 120px;
+    }
 }
