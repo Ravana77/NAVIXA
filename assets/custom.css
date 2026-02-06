@@ -1,15 +1,48 @@
-/*navbar and fotter background*/
+body {
+    background: linear-gradient(135deg, #4b1d6f, #0a2a66);
+    color: #ffffff;
+    min-height: 100vh;
+    /*display: flex;*/
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+html {
+    height: 100%;
+}
+
+/*navbar and footer background*/
 .brand-gradient {
     background: linear-gradient(135deg, #4b1d6f, #0a2a66);
 }
 
-/*logo*/
+
+
 .site-logo {
-    height: 80px; 
-    max-width: 200px; 
+    height: 320px;
+    max-width: 100%;
+    width: auto;
+    display: block;
+    margin: 0.5rem auto;
 }
 
-/*Navbar link*/
+@media (max-width: 576px) {
+    .site-logo {
+        height: 300px;
+        margin: 0.25rem auto;
+    }
+}
+
+
+header {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.text-pink {
+    color: #ff4fd8;   
+}
+
+/*Navbar*/
 .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.85);
 }
