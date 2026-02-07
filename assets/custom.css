@@ -11,7 +11,10 @@ html {
     height: 100%;
 }
 
-
+.navifont {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.25em;
+}
 .boxfont {
     font-family: 'Orbitron', sans-serif;
 }
@@ -45,9 +48,9 @@ header {
 
 
 
-/*tetsing starts from here*/
+/*testing starts from here*/
 
-/* RGB Glowing Box Effects  for the <main>*/
+/* RGB Glowing Box Effects  for componenets in the <main>*/
 .glow-box {
     position: relative;
     padding: 2px;
@@ -126,12 +129,14 @@ header {
 
 .glow-box-contact {
     position: relative;
-    padding: 2px;
+    padding: 2px 24px;
     border-radius: 8px;
     background: linear-gradient(135deg, #ff4fd8, #4b1d6f, #ff4fd8);
     background-size: 300% 300%;
     animation: gradientShift 4s ease infinite;
     box-shadow: 0 0 20px rgba(255, 79, 216, 0.4);
+    margin: 0px 111.8px;
+    
 }
 
 .glow-box-contact::before {
@@ -188,6 +193,8 @@ header {
     position: relative;
     transition: all 0.3s ease;
     color:#ffffff;
+    font-size: 1.50rem;
+    padding: 0.75rem 1.25rem;
 }
 
 .navbar-nav .nav-link::after {
