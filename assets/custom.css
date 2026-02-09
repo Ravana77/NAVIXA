@@ -117,6 +117,9 @@ header {
     animation: gradientShift 3.5s ease infinite;
     box-shadow: 0 0 15px rgba(255, 79, 216, 0.35);
 }
+.card-body p.text-white-75 {
+    margin-top: 1.5rem;   /* or 2rem, 2.5rem — experiment */
+}
 
 .glow-box-team::before {
     content: '';
@@ -279,4 +282,18 @@ header {
         width: 120px;
         height: 120px;
     }
+}
+
+/*image colour testing*/
+.image-glow-frame {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid #ff4fd8;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff4fd8, #4b1d6f); 
+    background-size: 100% 100%;
+    box-shadow: 
+        0 0 15px rgba(255, 79, 216, 0.6), 
+        0 0 30px rgba(255, 79, 216, 0.3);
 }
